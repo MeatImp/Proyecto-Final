@@ -263,21 +263,26 @@ public class Game {
 	Z = Casa
 	*/
 	
-	/* Libreria
+	/* Libreria (Agregar cosas que se nos olvidan que son)
 	input = lo que el jugador escribio en bruto
 	palabrasInp = arreglo de las diferentes palabras en input.
 	*/
 	
 	/* Declaraciones etc
+	 
+	Variables
 	lectura int  Integer.parseInt(in.readLine( ));
 	lectura float  Float.parseFloat(in.readLine( ));
 	lectura double Double.parseDouble(in.readLine( ));
 	impresion   System.out.print("impresion");
 	lectura String  in.readLine( );
 
+
+	 Arreglos 
 	 
 	 int [] algo = new int []; 
 	 
+	 Operaciones con Strings
 
 	.length(): Regresa el tamaño de una cadena
 	.charAt(i): Regresa un caracter de una cadena
