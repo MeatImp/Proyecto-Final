@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Game {
 	 static BufferedReader in = new BufferedReader(new   InputStreamReader(System.in));
@@ -241,9 +243,9 @@ public class Game {
 	
 	/* Orden y nomenclatura
 	 * 
-	 * Variables usadas en el Main
-	 * Arreglos y librerias usadas en el Main
-	 * Main
+	 * Variables usadas en el Main o los Constructores
+	 * Arreglos y librerias usadas en el Main o los Constructores
+	 * Main o los Constructores
 	 * Variables usadas en las funciones
 	 * Arreglos y librerias usadas en las funciones
 	 * Funciones
