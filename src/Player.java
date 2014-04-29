@@ -13,6 +13,7 @@ public class Player {
 	public static void moverPlayer(Player jug, int pA, int pB, int pC){
 		/*  
 		 * Tengo que arreglareste sistema, tiene que checar si hay terreno (o sea que X y Y no sean menores a 0 ni mayores de 6, ademas de que sea pasable, luego mover. 
+		 * tambien que diga a donde se movio
 		 
 		if (jug.x + pA > 6){
 			System.out.println("No te puedes mover mas al Norte");			

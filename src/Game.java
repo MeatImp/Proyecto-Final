@@ -140,7 +140,45 @@ public class Game {
 			
 			//la ayuda debe de ser facilmente accesible			 
 			if (input != "ayuda"){
-				
+				int opcion = 0;
+				int intento = 0;
+				boolean resuelto = false;
+				while(!(resuelto)){
+					switch (intento){
+					case 0:
+						
+						//checa la primera libreria (movimiento)
+						for(cA = 0; cA < palabrasInp.length; cA++){
+							for(cB = 0; cB < palabrasMovimiento.length; cB++){
+								if(palabrasMovimiento[cB]== palabrasInp[cA]){
+									resuelto = true;
+									opcion = 1;
+								}
+							}
+						}
+						break;
+					case 1:
+						break;
+					case 2:
+						break;
+					}
+					intento++;
+				}
+				switch(opcion){
+					default:
+						System.out.println("Hmm no se como hacer eso.");
+						System.out.println("*Recuerda que puedes usar AYUDA para ayudarte a jugar*");
+						break;
+					case 1:
+						//mover
+						break;
+					case 2:
+						//ver
+						break;
+					case 3:
+						//usar
+						break;
+				}
 			}
 			else{
 				imprimirAyuda();
