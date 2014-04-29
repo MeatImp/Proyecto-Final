@@ -4,12 +4,12 @@ public class Player {
 	
 	public Player(){
 		x = 3;
-		y = 2;
-		z = 1;
+		y = 5;
+		z = 0;
 	}
 	
 	public static void moverPlayer(Player jug, int pA, int pB, int pC){
-		
+		/*
 		if (jug.x + pA > 6){
 			System.out.println("No te puedes mover mas al Norte");			
 		}
@@ -45,6 +45,7 @@ public class Player {
 				jug.z = jug.z + pC;
 			}
 		}
+		*/
 		
 	}
 

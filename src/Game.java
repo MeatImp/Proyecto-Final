@@ -81,7 +81,7 @@ public class Game {
 		case 3:
 			System.out.println("Tambien puedes ... ");
 			System.out.print(" usar cosas,");
-			System.out.print(" subir o bajar,");
+			System.out.print(" subir o bajar (bajo ciertas condiciones),");
 			System.out.print(" preguntar QUE DEBO HACER,");
 			System.out.print(" etc...");
 			break;
@@ -98,7 +98,7 @@ public class Game {
 		try {
 			input = in.readLine();
 			input = input.toLowerCase();
-			 palabrasImp = input.split(" ");
+			palabrasImp = input.split(" ");
 			 
 			if (input != "ayuda"){
 				
@@ -132,7 +132,8 @@ public class Game {
 	*/
 	
 	/* Libreria
-
+	input = lo que el jugador escribio en bruto
+	palabrasImp = arreglo de las diferentes palabras en input.
 	*/
 	
 	/* Declaraciones etc
