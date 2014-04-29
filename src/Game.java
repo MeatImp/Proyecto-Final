@@ -242,8 +242,10 @@ public class Game {
 	/* Orden y nomenclatura
 	 * 
 	 * Variables usadas en el Main
+	 * Arreglos y librerias usadas en el Main
 	 * Main
 	 * Variables usadas en las funciones
+	 * Arreglos y librerias usadas en las funciones
 	 * Funciones
 	 * 
 	 * Tratar de ordenar luego en orden alfabetico por comodidad
