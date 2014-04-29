@@ -68,11 +68,25 @@ public class Game {
 	public static String [] palabrasInp;
 	
 	//librerias
+	public static String []	palabrasExtras;{
+		palabrasExtras[0] = "usar";
+		palabrasExtras[1] = "pista";
+		palabrasExtras[2] = "recoger";
+		palabrasExtras[3] = "pillopillo";
+	}
 	public static String []	palabrasMovimiento;{
 		palabrasMovimiento[0] = "ir";
 		palabrasMovimiento[1] = "viajar";
 		palabrasMovimiento[2] = "caminar";
 		palabrasMovimiento[3] = "moverse";
+		palabrasMovimiento[4] = "subir";
+		palabrasMovimiento[5] = "bajar";
+	}
+	public static String []	palabrasObservar;{
+		palabrasObservar[0] = "ver";
+		palabrasObservar[1] = "mirar";
+		palabrasObservar[2] = "observar";
+		palabrasObservar[3] = "analizar";
 	}
 	
 	public static void imprimirAyuda(){
@@ -158,8 +172,29 @@ public class Game {
 						}
 						break;
 					case 1:
+						//checa la segunda libreria (observar)
+						for(cA = 0; cA < palabrasInp.length; cA++){
+							for(cB = 0; cB < palabrasObservar.length; cB++){
+								if(palabrasObservar[cB]== palabrasInp[cA]){
+									resuelto = true;
+									opcion = 2;
+								}
+							}
+						}
 						break;
 					case 2:
+						//checa la tercera libreria (observar)
+						for(cA = 0; cA < palabrasInp.length; cA++){
+							for(cB = 0; cB < palabrasExtras.length; cB++){
+								if(palabrasExtras[cB]== palabrasInp[cA]){
+									resuelto = true;
+									opcion = 3;
+								}
+							}
+						}
+						break;
+					case 3:
+						resuelto = true;
 						break;
 					}
 					intento++;
@@ -176,7 +211,7 @@ public class Game {
 						//ver
 						break;
 					case 3:
-						//usar
+						//extras
 						break;
 				}
 			}
