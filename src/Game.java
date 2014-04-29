@@ -15,12 +15,16 @@ public class Game {
 	
 	public static Terreno [][][] Mapa = Terreno.crearTerreno();
 	
+	public static Yogi Oso = new Yogi(2,4,0);
+	
+	
 	public static Player jugador;
 	
 	public static void main(String Arg[ ]) throws IOException    {
 		
 		
 		
+		@SuppressWarnings("unused")
 		String salir;
 	
 		System.out.println("La Cueva, un juego de exploracion a base de Texto.");
@@ -42,7 +46,7 @@ public class Game {
 	}
 	
 	public static String input;
-	public static String [] palabrasImp;
+	public static String [] palabrasInp;
 	
 	public static String []	palabrasMovimiento;{
 		palabrasMovimiento[0] = "ir";
@@ -101,7 +105,7 @@ public class Game {
 		try {
 			input = in.readLine();
 			input = input.toLowerCase();
-			palabrasImp = input.split(" ");
+			palabrasInp = input.split(" ");
 			 
 			if (input != "ayuda"){
 				
@@ -121,8 +125,11 @@ public class Game {
 
 	public static void llegue(){
 		revelarPosicion();
+		Yogi.movimientoOso(Oso);
 		Mapa[jugador.z][jugador.y][jugador.x].visitado = true;
 	}
+	
+	
 	
 	public static void revelarPosicion(){
 		if (Mapa[jugador.z][jugador.y][jugador.x].visitado){
@@ -209,7 +216,7 @@ public class Game {
 	
 	/* Libreria
 	input = lo que el jugador escribio en bruto
-	palabrasImp = arreglo de las diferentes palabras en input.
+	palabrasInp = arreglo de las diferentes palabras en input.
 	*/
 	
 	/* Declaraciones etc
