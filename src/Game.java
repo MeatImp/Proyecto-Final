@@ -254,31 +254,31 @@ public class Game {
 			
 			switch(Mapa[jugador.z][jugador.y][jugador.x].tipo + ""){
 				case ("A"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en los arbustos.");
 					break;
 				case ("B"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en en el bosque.");
 					break;
 				case ("C"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en la entrada de la cueva.");
 					break;
 				case ("D"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en el área quemada del bosque.");
 					break;
 				case ("G"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en el campo abierto.");
 					break;
 				case ("L"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en el lago.");
 					break;
 				case ("P"):
-					System.out.println("Estas en ");
+					System.out.println("Estas en la playa.");
 					break;
 				case ("R"):
-					System.out.println("Estas en ");
+					System.out.println("Estas al borde del risco.");
 					break;
 				case ("Z"):
-					System.out.println("Estas en ");
+					System.out.println("Estas dentro de la casa.");
 					break;
 			}
 		}
@@ -288,16 +288,16 @@ public class Game {
 			
 			switch(Mapa[jugador.z][jugador.y][jugador.x].tipo + ""){
 				case ("A"):
-					System.out.println("Estas en ");
+					System.out.println("Llegaste a unos arbustos.");
 					break;
 				case ("B"):
-					System.out.println("Estas en ");
+					System.out.println("Llegaste al bosque.");
 					break;
 				case ("C"):
-					System.out.println("Estas en ");
+					System.out.println("Que mal huele esto... parece ser la entrada a una cueva.");
 					break;
 				case ("D"):
-					System.out.println("Estas en ");
+					System.out.println("Parece ");
 					break;
 				case ("G"):
 					System.out.println("Estas en ");
@@ -309,10 +309,10 @@ public class Game {
 					System.out.println("Estas en ");
 					break;
 				case ("R"):
-					System.out.println("Estas en ");
+					System.out.println("Parece que estoy al borde del risco... una caida desde aqui no seria de contarse.");
 					break;
 				case ("Z"):
-					System.out.println("Estas en ");
+					System.out.println("Nada mejor como el olor del hogar... o de la choza");
 					break;
 			}
 		}
