@@ -6,12 +6,17 @@ public class Yogi {
 	public int z;
 	
 	public Yogi (int a, int b, int c){
+		
+		//pot si queremos crear un oso en coordenadas especificas, tal vez en la cueva.
+		
 		x = a;
 		y = b;
 		z = c;
 	}
 	
 	public static Yogi crearOso(Yogi osU){
+		//crea un oso en el noreste del bosque
+		
 		osU = new Yogi(2,2,0);
 		return osU;
 	}

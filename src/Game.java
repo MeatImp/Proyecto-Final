@@ -19,16 +19,20 @@ public class Game {
 	
 	public static Yogi Oso = new Yogi(2,4,0);
 	
+	//jugador
 	
 	public static Player jugador;
 	
+	
+	//Main, declare algunas variables antes por que son estaticos
 	public static void main(String Arg[ ]) throws IOException    {
 		
 		
-		
+		//es para que no nos diga nada que no usamos salir, no te preocupes
 		@SuppressWarnings("unused")
 		String salir;
-	
+		
+		//texto de introduccion
 		System.out.println("La Cueva, un juego de exploracion a base de Texto.");
 		System.out.println("<-----Por Joseph M. Trippp, 27427, salon 2405---->");
 		System.out.println("<-----Por Luis F. Martinez, 27105, salon 2405---->");
@@ -37,6 +41,15 @@ public class Game {
 		System.out.println(/*Introduccion*/);
 		System.out.println("¿Que haras ahora?");
 		System.out.println("*Puedes escribir 'Ayuda' para obtener una lista de comandos*");
+		
+		/*
+		 * este while literalmente es el juego completo xd.
+		 * te dice la informacion de cuando llegas a una casilla
+		 * lee los comandos que tiene ingresa el jugador
+		 * y esas dos funciones se encargan de que salga todo
+		 * 
+		 * debo de poner que el lupillo pueda salir cuando queira..
+		 */
 		
 		while(!(gameend)){
 			llegue();
@@ -47,9 +60,12 @@ public class Game {
 		salir = in.readLine();
 	}
 	
+	
+	//cosas genericas
 	public static String input;
 	public static String [] palabrasInp;
 	
+	//librerias
 	public static String []	palabrasMovimiento;{
 		palabrasMovimiento[0] = "ir";
 		palabrasMovimiento[1] = "viajar";
@@ -59,9 +75,11 @@ public class Game {
 	
 	public static void imprimirAyuda(){
 		
+		//si llegaste aqui es por que necesitas ayuda, entonces...
 		boolean necesitoAyuda = true;
 		int opcionAyuda;
 		
+		//con que la necesitas?
 		while (necesitoAyuda){
 			System.out.println("Menu de Ayuda... Quieres?");
 			System.out.println("1.- Observar");
@@ -74,6 +92,8 @@ public class Game {
 			} catch (IOException e) {
 				opcionAyuda = 0;
 			}
+			
+			//estos comandos pueden mejorar bastante, pero necesito las librerias
 			
 			switch (opcionAyuda){
 			default:
@@ -88,6 +108,9 @@ public class Game {
 				System.out.println("EJEMPLO... Ver alrededor");
 				break;
 			case 3:
+				
+				//aqui podemos poner mas comandos
+				
 				System.out.println("Tambien puedes ... ");
 				System.out.print(" usar cosas,");
 				System.out.print(" subir o bajar (bajo ciertas condiciones),");
@@ -104,11 +127,16 @@ public class Game {
 	}
 	
 	public static void leerInput(){
+		
+		//los interpretes se llaman parses, si digo parse es por eso.
 		try {
+			
+			//leer y separar las palabras
 			input = in.readLine();
 			input = input.toLowerCase();
 			palabrasInp = input.split(" ");
-			 
+			
+			//la ayuda debe de ser facilmente accesible			 
 			if (input != "ayuda"){
 				
 			}
@@ -116,7 +144,7 @@ public class Game {
 				imprimirAyuda();
 			}
 			
-		} 
+		}//esto es un catch, nos sirve en caso que el jugador la cague de alguna manera, detecta problemas en el juego, y trata de reiniciar. Despues de muchos turnos tal vez se nos sature la memoria, muchos siendo 2^32 turnos
 		catch (IOException e) {
 			
 			System.out.println("*Introducir texto en blanco podria causar errores, intenta no hacerlo.*");
@@ -210,6 +238,16 @@ public class Game {
 			}
 		}
 	}
+	
+	/* Orden y nomenclatura
+	 * 
+	 * Variables usadas en el Main
+	 * Main
+	 * Variables usadas en las funciones
+	 * Funciones
+	 * 
+	 * Tratar de ordenar luego en orden alfabetico por comodidad
+	 */
 	
 	/* Definiciones de mapa
 	A = Arbusto
