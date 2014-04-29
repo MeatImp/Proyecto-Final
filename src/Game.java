@@ -15,6 +15,8 @@ public class Game {
 	
 	public static Terreno [][][] Mapa = Terreno.crearTerreno();
 	
+	//Oso
+	
 	public static Yogi Oso = new Yogi(2,4,0);
 	
 	
@@ -61,43 +63,43 @@ public class Game {
 		int opcionAyuda;
 		
 		while (necesitoAyuda){
-		System.out.println("Menu de Ayuda... Quieres?");
-		System.out.println("1.- Observar");
-		System.out.println("2.- Trasladarte");
-		System.out.println("3.- Que mas puedo hacer?");
-		System.out.println("4.- Salir");
-		
-		try {
-			opcionAyuda = Integer.parseInt(in.readLine( ));
-		} catch (IOException e) {
-			opcionAyuda = 0;
-		}
-		
-		switch (opcionAyuda){
-		default:
-			System.out.println("Esa no parece una opcion, vuelve a intentar.");
-			break;
-		case 1:
-			System.out.println("Puedes decir IR, VIAJAR, CAMINAR o MOVERSE, seguido de la direccion que quieras, para moverte.");
-			System.out.println("EJEMPLO... Caminar hacia el Norte");
-			break;
-		case 2:
-			System.out.println("Puedes decir VER, OBSERVAR o MIRAR para investigar algo o tus alrededores, como si fuera la primera vez que los ves.");
-			System.out.println("EJEMPLO... Ver alrededor");
-			break;
-		case 3:
-			System.out.println("Tambien puedes ... ");
-			System.out.print(" usar cosas,");
-			System.out.print(" subir o bajar (bajo ciertas condiciones),");
-			System.out.print(" preguntar QUE DEBO HACER,");
-			System.out.print(" etc...");
-			break;
-		case 4:
-			necesitoAyuda = false;
-			break;
-		
-		}
-		
+			System.out.println("Menu de Ayuda... Quieres?");
+			System.out.println("1.- Observar");
+			System.out.println("2.- Trasladarte");
+			System.out.println("3.- Que mas puedo hacer?");
+			System.out.println("4.- Salir");
+			
+			try {
+				opcionAyuda = Integer.parseInt(in.readLine( ));
+			} catch (IOException e) {
+				opcionAyuda = 0;
+			}
+			
+			switch (opcionAyuda){
+			default:
+				System.out.println("Esa no parece una opcion, vuelve a intentar.");
+				break;
+			case 1:
+				System.out.println("Puedes decir IR, VIAJAR, CAMINAR o MOVERSE, seguido de la direccion que quieras, para moverte.");
+				System.out.println("EJEMPLO... Caminar hacia el Norte");
+				break;
+			case 2:
+				System.out.println("Puedes decir VER, OBSERVAR o MIRAR para investigar algo o tus alrededores, como si fuera la primera vez que los ves.");
+				System.out.println("EJEMPLO... Ver alrededor");
+				break;
+			case 3:
+				System.out.println("Tambien puedes ... ");
+				System.out.print(" usar cosas,");
+				System.out.print(" subir o bajar (bajo ciertas condiciones),");
+				System.out.print(" preguntar QUE DEBO HACER,");
+				System.out.print(" etc...");
+				break;
+			case 4:
+				necesitoAyuda = false;
+				break;
+			
+			}
+			
 		}
 	}
 	
@@ -124,8 +126,15 @@ public class Game {
 	}
 
 	public static void llegue(){
+		//Mueve el oso despues del jugador	
+		Oso = Yogi.movimientoOso(Oso);
+		
+		//BUSCAROSO player.buscaroso(jugador,Oso);
+		
+		
+		//Se revela la posicion del jugador "Donde quede", y cosas como donde esta el oso "Que hay a mi alrededor"
 		revelarPosicion();
-		Yogi.movimientoOso(Oso);
+		//Se marca la casilla como visitada
 		Mapa[jugador.z][jugador.y][jugador.x].visitado = true;
 	}
 	

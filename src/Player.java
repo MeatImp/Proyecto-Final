@@ -3,13 +3,18 @@ public class Player {
 	public int x,y,z;
 	
 	public Player(){
+		
+		//este contructor crea un jugador nuevo con las coordenadas, justo afuera de la choza
+		
 		x = 3;
 		y = 5;
 		z = 0;
 	}
 	
 	public static void moverPlayer(Player jug, int pA, int pB, int pC){
-		/*
+		/*  
+		 * Tengo que arreglareste sistema, tiene que checar si hay terreno (o sea que X y Y no sean menores a 0 ni mayores de 6, ademas de que sea pasable, luego mover. 
+		 
 		if (jug.x + pA > 6){
 			System.out.println("No te puedes mover mas al Norte");			
 		}

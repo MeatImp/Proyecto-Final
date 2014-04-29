@@ -16,11 +16,14 @@ public class Yogi {
 		return osU;
 	}
 
-	public static void movimientoOso(Yogi bear){
+	public static Yogi movimientoOso(Yogi bear){
 		boolean yafue = false;
 		Random run = new Random();
 		while (!(yafue)){
 			int ran = run.nextInt(4);
+			
+			//toma una direccion al azar, luego checa si en esa direccion hay un arbusto A o un bosque B, si asi es, mueve al oso en esa direccion.
+			
 			switch (ran){
 				case 1:
 					//norte
@@ -53,5 +56,6 @@ public class Yogi {
 			
 			}
 		}
+		return bear;
 	}
 }
