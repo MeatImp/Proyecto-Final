@@ -89,6 +89,10 @@ public class Game {
 		palabrasObservar[3] = "analizar";
 	}
 	
+	public static void encuentroOso(){
+		
+	}
+	
 	public static void imprimirAyuda(){
 		
 		//si llegaste aqui es por que necesitas ayuda, entonces...
@@ -232,7 +236,7 @@ public class Game {
 		//Mueve el oso despues del jugador	
 		Oso = Yogi.movimientoOso(Oso);
 		
-		//BUSCAROSO player.buscaroso(jugador,Oso);
+		//BUSCAROSO player.buscaroso(jugador,Oso); 
 		
 		
 		//Se revela la posicion del jugador "Donde quede", y cosas como donde esta el oso "Que hay a mi alrededor"
