@@ -22,6 +22,7 @@ public class Game {
 	
 		System.out.println("La Cueva, un juego de exploracion a base de Texto.");
 		System.out.println("<-----Por Joseph M. Trippp, 27427, salon 2405---->");
+		System.out.println("<-----Por Luis F. Martinez, 27105, salon 2405---->");
 		System.out.println("<---##########################################--->");
 		
 		System.out.println(/*Introduccion*/);
