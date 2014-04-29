@@ -13,9 +13,12 @@ public class Game {
 	
 	//Terreno
 	
-	public Terreno [][][] Mapa = Terreno.crearTerreno();
+	public static Terreno [][][] Mapa = Terreno.crearTerreno();
+	
+	public static Player jugador;
 	
 	public static void main(String Arg[ ]) throws IOException    {
+		
 		
 		
 		String salir;
@@ -117,8 +120,81 @@ public class Game {
 	}
 
 	public static void llegue(){
-		
+		revelarPosicion();
+		Mapa[jugador.z][jugador.y][jugador.x].visitado = true;
 	}
+	
+	public static void revelarPosicion(){
+		if (Mapa[jugador.z][jugador.y][jugador.x].visitado){
+			
+			//si ya fue visitado
+			
+			switch(Mapa[jugador.z][jugador.y][jugador.x].tipo + ""){
+				case ("A"):
+					System.out.println("Estas en ");
+					break;
+				case ("B"):
+					System.out.println("Estas en ");
+					break;
+				case ("C"):
+					System.out.println("Estas en ");
+					break;
+				case ("D"):
+					System.out.println("Estas en ");
+					break;
+				case ("G"):
+					System.out.println("Estas en ");
+					break;
+				case ("L"):
+					System.out.println("Estas en ");
+					break;
+				case ("P"):
+					System.out.println("Estas en ");
+					break;
+				case ("R"):
+					System.out.println("Estas en ");
+					break;
+				case ("Z"):
+					System.out.println("Estas en ");
+					break;
+			}
+		}
+		else{
+			
+			//si aun no ha sido visitado
+			
+			switch(Mapa[jugador.z][jugador.y][jugador.x].tipo + ""){
+				case ("A"):
+					System.out.println("Estas en ");
+					break;
+				case ("B"):
+					System.out.println("Estas en ");
+					break;
+				case ("C"):
+					System.out.println("Estas en ");
+					break;
+				case ("D"):
+					System.out.println("Estas en ");
+					break;
+				case ("G"):
+					System.out.println("Estas en ");
+					break;
+				case ("L"):
+					System.out.println("Estas en ");
+					break;
+				case ("P"):
+					System.out.println("Estas en ");
+					break;
+				case ("R"):
+					System.out.println("Estas en ");
+					break;
+				case ("Z"):
+					System.out.println("Estas en ");
+					break;
+			}
+		}
+	}
+	
 	/* Definiciones de mapa
 	A = Arbusto
 	B = Bosque
