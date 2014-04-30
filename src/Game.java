@@ -225,7 +225,7 @@ public class Game {
 						break;
 					case 1:
 						//mover
-						Player.moverPlayer(jugador, palabrasInp);
+						jugador.moverPlayer(palabrasInp);
 						break;
 					case 2:
 						//ver

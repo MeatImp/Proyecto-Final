@@ -10,7 +10,7 @@ public class Player {
 		z = 0;
 	}
 	
-	public static void moverPlayer(Player jug, String [] in){
+	public void moverPlayer(String [] in){
 		boolean encontrarD = false;
 		int cAa = in.length;
 		int cBb =0;
@@ -88,7 +88,7 @@ public class Player {
 		}
 	}
 	
-	public static void moverPlayerNO(){
+	public  void moverPlayerNO(){
 		if(Game.jugador.x >= 1 || Game.jugador.y >= 1 ){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y-1][Game.jugador.x-1].pasable){
@@ -105,7 +105,7 @@ public class Player {
 
 	}
 	
-	public static void moverPlayerNE(){
+	public  void moverPlayerNE(){
 		if(Game.jugador.x >= 1 || Game.jugador.y <= 5 ){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y+1][Game.jugador.x-1].pasable){
@@ -121,7 +121,7 @@ public class Player {
 		}
 	}
 	
-	public static void moverPlayerSO(){
+	public  void moverPlayerSO(){
 		if(Game.jugador.x <= 5 || Game.jugador.y >= 1 ){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y-1][Game.jugador.x+1].pasable){
@@ -137,7 +137,7 @@ public class Player {
 		}
 	}
 	
-	public static void moverPlayerSE(){
+	public  void moverPlayerSE(){
 		if(Game.jugador.x <= 5 || Game.jugador.y <= 5 ){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y+1][Game.jugador.x+1].pasable){
@@ -153,7 +153,7 @@ public class Player {
 		}
 	}	
 	
-	public static void moverPlayerN(){
+	public  void moverPlayerN(){
 		if(Game.jugador.x >= 1){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y][Game.jugador.x-1].pasable){
@@ -168,7 +168,7 @@ public class Player {
 		}
 	}
 	
-	public static void moverPlayerS(){
+	public  void moverPlayerS(){
 		if(Game.jugador.x <=5){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y][Game.jugador.x+1].pasable){
@@ -183,7 +183,7 @@ public class Player {
 		}
 	}
 
-	public static void moverPlayerE(){
+	public  void moverPlayerE(){
 		if(Game.jugador.y <= 5){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y + 1][Game.jugador.x].pasable){
@@ -199,7 +199,7 @@ public class Player {
 	
 	}
 
-	public static void moverPlayerO(){
+	public  void moverPlayerO(){
 		if(Game.jugador.y >= 1){
 
 			if(Game.Mapa[Game.jugador.z][Game.jugador.y-1][Game.jugador.x].pasable){
