@@ -89,6 +89,11 @@ public class Game {
 		palabrasObservar[3] = "analizar";
 	}
 	
+	public static String [] palabrasVertical;{
+		palabrasVertical[0] = "subir";
+		palabrasVertical[0] = "bajar";
+	}
+	
 	public static void encuentroOso(){
 		if (Player.movimiento [Player.x][Player.y][Player.z])
 	}
@@ -120,21 +125,31 @@ public class Game {
 				System.out.println("Esa no parece una opcion, vuelve a intentar.");
 				break;
 			case 1:
-				System.out.println("Puedes decir IR, VIAJAR, CAMINAR o MOVERSE, seguido de la direccion que quieras, para moverte.");
+				System.out.println("Puedes decir");
+				for(cA = 0; cA < palabrasObservar.length;cA++){
+					System.out.print(" " + palabrasMovimiento[cA].toUpperCase());
+				}
+				System.out.print(" seguido de la direccion que quieras, para moverte.");
 				System.out.println("EJEMPLO... Caminar hacia el Norte");
 				break;
 			case 2:
-				System.out.println("Puedes decir VER, OBSERVAR o MIRAR para investigar algo o tus alrededores, como si fuera la primera vez que los ves.");
+				System.out.println("Puedes decir");
+				for(cA = 0; cA < palabrasObservar.length;cA++){
+					System.out.print(" " + palabrasObservar[cA].toUpperCase());
+				}
+				System.out.print(" para investigar algo o tus alrededores, como si fuera la primera vez que los ves.");
 				System.out.println("EJEMPLO... Ver alrededor");
 				break;
 			case 3:
 				
 				//aqui podemos poner mas comandos
-				
 				System.out.println("Tambien puedes ... ");
-				System.out.print(" usar cosas,");
-				System.out.print(" subir o bajar (bajo ciertas condiciones),");
-				System.out.print(" preguntar QUE DEBO HACER,");
+				for(cA = 0; cA < palabrasExtras.length;cA++){
+					System.out.print(" " + palabrasExtras[cA].toUpperCase());
+				}
+				for(cA = 0; cA < palabrasVertical.length;cA++){
+					System.out.print(" " + palabrasVertical[cA].toUpperCase());
+				}
 				System.out.print(" etc...");
 				break;
 			case 4:
@@ -187,7 +202,7 @@ public class Game {
 						}
 						break;
 					case 2:
-						//checa la tercera libreria (observar)
+						//checa la tercera libreria (extras)
 						for(cA = 0; cA < palabrasInp.length; cA++){
 							for(cB = 0; cB < palabrasExtras.length; cB++){
 								if(palabrasExtras[cB]== palabrasInp[cA]){
@@ -210,6 +225,7 @@ public class Game {
 						break;
 					case 1:
 						//mover
+						Player.moverPlayer(jugador, palabrasInp);
 						break;
 					case 2:
 						//ver
