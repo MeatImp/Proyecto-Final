@@ -95,7 +95,7 @@ public class Game {
 	}
 	
 	public static void encuentroOso(){
-		if (Player.movimiento [Player.x][Player.y][Player.z])
+	//	if (Player.movimiento [Player.x][Player.y][Player.z])
 	}
 	
 	public static void imprimirAyuda(){
