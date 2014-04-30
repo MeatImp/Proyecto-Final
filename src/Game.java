@@ -90,7 +90,7 @@ public class Game {
 	}
 	
 	public static void encuentroOso(){
-		
+		if (Player.movimiento [Player.x][Player.y][Player.z])
 	}
 	
 	public static void imprimirAyuda(){
@@ -297,16 +297,16 @@ public class Game {
 					System.out.println("Que mal huele esto... parece ser la entrada a una cueva.");
 					break;
 				case ("D"):
-					System.out.println("Parece ");
+					System.out.println("Que raro, parece que hubo un incendio aqui...");
 					break;
 				case ("G"):
-					System.out.println("Estas en ");
+					System.out.println("Que fresco es el aire en el campo abierto.");
 					break;
 				case ("L"):
-					System.out.println("Estas en ");
+					System.out.println("Algo esta mal, el agua me llega hasta el cuello, tal vez no deberia estar aqui.");
 					break;
 				case ("P"):
-					System.out.println("Estas en ");
+					System.out.println("Ah! Llegue a la playa.");
 					break;
 				case ("R"):
 					System.out.println("Parece que estoy al borde del risco... una caida desde aqui no seria de contarse.");
